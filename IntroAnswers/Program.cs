@@ -65,7 +65,6 @@
 		{
 			const double PackingDensity = 0.75;
 			double volBallPit = Math.PI * Math.Pow(radiusBallPit, 2) * heightBallPit;
-			Console.WriteLine(volBallPit);
 			double volBall = 4d / 3d * Math.PI * Math.Pow(radiusBall,3);
 			return Math.Ceiling(volBallPit / (volBall * PackingDensity));
 		}
