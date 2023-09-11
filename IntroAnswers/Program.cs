@@ -30,7 +30,7 @@
 			Console.WriteLine("Q4");
 			double ballsToFillPit = BallsToFillPit(1, 0.5, 0.075);
 			Console.WriteLine($"{ballsToFillPit} balls will be needed to fill the pit\n");
-		}
+        }
 
 		public static void DrawMan()
 		{
@@ -66,7 +66,8 @@
 			const double PackingDensity = 0.75;
 			double volBallPit = Math.PI * Math.Pow(radiusBallPit, 2) * heightBallPit;
 			double volBall = 4d / 3d * Math.PI * Math.Pow(radiusBall,3);
-			return Math.Ceiling(volBallPit / (volBall * PackingDensity));
+            // Find ratio first, packing density constant should decrease the number of balls
+            return Math.Ceiling(volBallPit / volBall * PackingDensity); 
 		}
-	}
+    }
 }
